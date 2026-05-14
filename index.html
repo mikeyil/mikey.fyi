@@ -26,7 +26,7 @@
       --bg-card: #ffffff;
       --text: #1A1A1A;
       --text-muted: #4A4A55;
-      --border: rgba(0,0,0,0.08);
+      --border: rgba(0,0,0,0.22);
       --shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
@@ -36,7 +36,7 @@
         --bg-card: #1C1C1F;
         --text: #F0F0F5;
         --text-muted: #9999AA;
-        --border: rgba(255,255,255,0.08);
+        --border: rgba(255,255,255,0.18);
         --shadow: 0 2px 12px rgba(0,0,0,0.4);
       }
     }
@@ -73,8 +73,11 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       line-height: 1.1;
-      color: #ffffff;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.18);
+      color: var(--text);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .profile h1 { color: #ffffff; }
     }
 
     .profile p {
@@ -96,6 +99,11 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      list-style: none;
+    }
+
+    .links li {
+      display: contents;
     }
 
     .link-card {
@@ -210,56 +218,66 @@
       <p>Accessibility specialist. Twenty years in UX, frontend, and product. Ten years all-in on accessibility. Coaching, auditing, and building open source tools for the people doing the work. Claude called my writing "warm, self-aware, a little chaotic-in-a-charming-way, deeply human-centered, and grounded in your cross-functional accessibility brain." Accurate.</p>
     </div>
 
-    <div>
-      <p class="section-label">Projects</p>
-      <div class="links">
-        <a href="https://a11yfred.app" class="link-card" target="_blank" rel="noopener noreferrer">
-          <div class="link-icon" aria-hidden="true">A</div>
-          <div class="link-text">
-            <strong>A11yFred</strong>
-            <span>WCAG defect descriptions for accessibility auditors</span>
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-label">Projects</h2>
+      <ul class="links">
+        <li>
+          <a href="https://a11yfred.app" class="link-card" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon" aria-hidden="true">A</div>
+            <div class="link-text">
+              <strong>A11yFred</strong>
+              <span>WCAG defect descriptions for accessibility auditors</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/a11yfred/rogers" class="link-card" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <div class="link-text">
+              <strong>rogers</strong>
+              <span>In-browser accessibility overlay debugger &middot; @a11yfred/rogers</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/a11yfred/neighbor" class="link-card" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div class="link-text">
+              <strong>neighbor</strong>
+              <span>ESLint + Stylelint rules for accessibility &middot; @a11yfred/neighbor</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/mikeyil/ulam" class="link-card" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <div class="link-text">
+              <strong>ulam</strong>
+              <span>Accessible UI primitives for React, Vue, and Angular &middot; @ulam</span>
+            </div>
+          </a>
+        </li>
+        <li aria-hidden="true">
+          <div class="link-card coming-soon">
+            <div class="link-icon neutral">🔜</div>
+            <div class="link-text">
+              <strong>More coming soon</strong>
+              <span>Stay tuned</span>
+            </div>
+            <span class="badge">Soon</span>
           </div>
-        </a>
-        <a href="https://github.com/a11yfred/rogers" class="link-card" target="_blank" rel="noopener noreferrer">
-          <div class="link-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          </div>
-          <div class="link-text">
-            <strong>rogers</strong>
-            <span>In-browser accessibility overlay debugger &middot; @a11yfred/rogers</span>
-          </div>
-        </a>
-        <a href="https://github.com/a11yfred/neighbor" class="link-card" target="_blank" rel="noopener noreferrer">
-          <div class="link-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <div class="link-text">
-            <strong>neighbor</strong>
-            <span>ESLint + Stylelint rules for accessibility &middot; @a11yfred/neighbor</span>
-          </div>
-        </a>
-        <a href="https://github.com/mikeyil/ulam" class="link-card" target="_blank" rel="noopener noreferrer">
-          <div class="link-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-          </div>
-          <div class="link-text">
-            <strong>ulam</strong>
-            <span>Accessible UI primitives for React, Vue, and Angular &middot; @ulam</span>
-          </div>
-        </a>
-        <div class="link-card coming-soon" aria-hidden="true">
-          <div class="link-icon neutral">🔜</div>
-          <div class="link-text">
-            <strong>More coming soon</strong>
-            <span>Stay tuned</span>
-          </div>
-          <span class="badge">Soon</span>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </section>
 
-    <div>
-      <p class="section-label">Connect</p>
+    <section aria-labelledby="connect-heading">
+      <h2 id="connect-heading" class="section-label">Connect</h2>
       <div class="social">
         <a href="https://bsky.app/profile/mikey.fyi" class="social-link" target="_blank" rel="noopener noreferrer">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.242 1.364.84 3.418c-.306 1.566-.756 5.644-.756 6.867 0 4.229 2.943 5.667 5.836 5.667 1.04 0 2.04-.152 2.987-.434C7.082 19.103 5.316 21.93 3.65 23.341c-1.437 1.21.419 2.185 1.516 1.337C7.374 23.013 10.14 19.86 12 17.097c1.86 2.763 4.626 5.916 6.834 7.581 1.097.848 2.953-.127 1.516-1.337-1.666-1.41-3.432-4.238-5.257-7.823.947.282 1.947.434 2.987.434 2.893 0 5.836-1.438 5.836-5.667 0-1.223-.45-5.301-.756-6.867-.402-2.054-1.726-2.474-4.362-.617C15.046 4.747 13.087 8.686 12 10.8z"/></svg>
@@ -278,7 +296,7 @@
           GitHub
         </a>
       </div>
-    </div>
+    </section>
 
     <footer>mikey.fyi</footer>
   </main>
