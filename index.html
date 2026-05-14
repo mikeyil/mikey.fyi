@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mikey Ilagan</title>
+  <meta name="description" content="Mikey Ilagan — accessibility engineer and open source developer." />
+  <meta name="color-scheme" content="light dark" />
+
+  <meta property="og:title" content="Mikey Ilagan" />
+  <meta property="og:description" content="Accessibility engineer and open source developer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mikey.fyi/" />
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="7589cc7c-ad2b-405f-b7c6-20aa0a664d9a"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #5445D6;
+      --purple-light: #7A6BEC;
+      --bg: #F5F5F7;
+      --bg-card: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #4A4A55;
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111113;
+        --bg-card: #1C1C1F;
+        --text: #F0F0F5;
+        --text-muted: #9999AA;
+        --border: rgba(255,255,255,0.08);
+        --shadow: 0 2px 12px rgba(0,0,0,0.4);
+      }
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .profile h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .profile h1 span {
+      color: var(--purple);
+    }
+
+    .profile p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 0.875rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+
+    .link-card:hover {
+      border-color: var(--purple-light);
+      transform: translateY(-1px);
+    }
+
+    .link-card:focus-visible {
+      outline: 2px solid var(--purple);
+      outline-offset: 2px;
+    }
+
+    .link-card.coming-soon {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(160deg, var(--purple-light), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .link-icon.neutral {
+      background: var(--border);
+    }
+
+    .link-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .link-text strong {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    .link-text span {
+      display: block;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .badge {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 0.2em 0.55em;
+      border-radius: 99px;
+      background: var(--border);
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+
+    .social {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 0.875rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .social-link:hover { color: var(--text); border-color: var(--purple-light); }
+    .social-link:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+
+    footer {
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="profile">
+      <h1>Mikey <span>Ilagan</span></h1>
+      <p>Accessibility engineer. Building open source tools for the a11y community.</p>
+    </div>
+
+    <div>
+      <p class="section-label">Projects</p>
+      <div class="links">
+        <a href="https://a11yfred.app" class="link-card" target="_blank" rel="noopener noreferrer">
+          <div class="link-icon" aria-hidden="true">A</div>
+          <div class="link-text">
+            <strong>A11yFred</strong>
+            <span>WCAG defect descriptions for accessibility auditors</span>
+          </div>
+        </a>
+        <a href="https://github.com/mikeyil/ulam" class="link-card" target="_blank" rel="noopener noreferrer">
+          <div class="link-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          </div>
+          <div class="link-text">
+            <strong>ulam</strong>
+            <span>Accessible UI primitives for React, Vue, and Angular</span>
+          </div>
+        </a>
+        <a href="https://github.com/mikeyil/ulam/tree/master/packages/neighbor" class="link-card" target="_blank" rel="noopener noreferrer">
+          <div class="link-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div class="link-text">
+            <strong>neighbor</strong>
+            <span>ESLint + Stylelint rules for accessibility</span>
+          </div>
+        </a>
+        <a href="https://github.com/a11yfred/rogers" class="link-card" target="_blank" rel="noopener noreferrer">
+          <div class="link-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="link-text">
+            <strong>rogers</strong>
+            <span>In-browser accessibility overlay debugger</span>
+          </div>
+        </a>
+        <div class="link-card coming-soon" aria-hidden="true">
+          <div class="link-icon neutral">🔜</div>
+          <div class="link-text">
+            <strong>More coming soon</strong>
+            <span>Stay tuned</span>
+          </div>
+          <span class="badge">Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="section-label">Connect</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/mikeyil" class="social-link" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/sponsors/mikeyil" class="social-link" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.593c-.425-.244-8.947-5.158-8.947-11.171C3.053 6.545 5.564 4 8.638 4c1.73 0 3.286.893 4.362 2.287C14.076 4.893 15.632 4 17.362 4c3.074 0 5.585 2.545 5.585 6.422 0 6.013-8.522 10.927-8.947 11.171z"/></svg>
+          Sponsor
+        </a>
+        <a href="https://github.com/mikeyil" class="social-link" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <footer>mikey.fyi</footer>
+  </main>
+</body>
+</html>
