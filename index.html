@@ -104,12 +104,8 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       line-height: 1.1;
-      color: var(--text);
     }
 
-    @media (prefers-color-scheme: dark) {
-      .profile h1 { color: #ffffff; }
-    }
 
     .profile p {
       color: var(--text-muted);
@@ -242,8 +238,15 @@
       white-space: nowrap;
     }
 
-    .social-link:hover { color: var(--text); border-color: var(--purple-light); }
-    .social-link:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+    .social-link:hover {
+      color: var(--text);
+      border-color: var(--purple-light);
+    }
+
+    .social-link:focus-visible {
+      outline: 2px solid var(--purple);
+      outline-offset: 2px;
+    }
 
     footer {
       margin-top: 1rem;
