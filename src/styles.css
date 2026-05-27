@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: var(--bg-page, #fff);
+  color: var(--text-primary, #000);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile h1 {
+  font-family: Rockwell, "Rockwell Extra Bold", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.profile p {
+  color: var(--text-muted, #4A4A55);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted, #4A4A55);
+  margin: 0 0 0.5rem 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background: var(--bg-card, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.22));
+}
+
+.pricing-table th, .pricing-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.22));
+}
+
+.pricing-table th {
+  background: rgba(0,0,0,0.02);
+  font-weight: 600;
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+footer {
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted, #4A4A55);
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg-page, #0D0D0E);
+    color: var(--text-primary, #fff);
+  }
+
+  .profile p, .section-label, footer {
+    color: var(--text-muted, #9999AA);
+  }
+
+  .pricing-table {
+    background: var(--bg-card, #1C1C1F);
+    border-color: var(--border-color, rgba(255,255,255,0.18));
+  }
+
+  .pricing-table th, .pricing-table td {
+    border-bottom-color: var(--border-color, rgba(255,255,255,0.18));
+  }
+
+  .pricing-table th {
+    background: rgba(255,255,255,0.02);
+  }
+}
